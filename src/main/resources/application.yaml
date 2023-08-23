@@ -1,0 +1,13 @@
+resilience4j.circuitbreaker:
+  instances:
+    catFacts:
+      failureRateThreshold: 50
+      waitDurationInOpenState: 10000
+      permittedNumberOfCallsInHalfOpenState: 1
+      minimumNumberOfCalls: 3
+
+resilience4j.timelimiter:
+  instances:
+    catFacts:
+      timeoutDuration: 3s
+      cancelRunningFuture: true
